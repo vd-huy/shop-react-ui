@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { styled } from "styled-components";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
   display: flex;
   justify-content: space-between;
   background-color: #fcf1ed;
   height: 80px;
+  ${mobile({ display: "none" })}
 `;
 
 const Nav = styled.div`
