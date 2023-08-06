@@ -1,5 +1,4 @@
 import {
-  Email,
   Facebook,
   GitHub,
   Instagram,

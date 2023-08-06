@@ -3,7 +3,9 @@ import {
   SearchOutlined,
   ShoppingCartOutlined,
 } from "@mui/icons-material";
+import { useEffect, useState } from "react";
 import { styled } from "styled-components";
+
 const Info = styled.div`
   opacity: 0;
   width: 100%;
@@ -66,22 +68,20 @@ const Icon = styled.div`
   }
 `;
 
-const handleCart = (item) => {
-  sessionStorage.item = item.img;
-};
-
 const Product = ({ item }) => {
+  const handleClick = (item) => {};
+
   return (
-    <Container>
+    <Container
+      onClick={() => {
+        handleClick(item);
+      }}
+    >
       <Circle />
       <Image src={item.img} />
       <Info>
         <Icon>
-          <ShoppingCartOutlined
-            onClick={() => {
-              handleCart(item);
-            }}
-          />
+          <ShoppingCartOutlined />
         </Icon>
         <Icon>
           <SearchOutlined />

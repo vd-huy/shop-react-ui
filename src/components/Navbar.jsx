@@ -1,6 +1,6 @@
 import { Search, ShoppingCartOutlined } from "@mui/icons-material";
 import { Badge } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import { styled } from "styled-components";
 import { mobile } from "../responsive";
 import { Link } from "react-router-dom";
@@ -46,6 +46,9 @@ const SearchContainer = styled.div`
 
 const Input = styled.input`
   border: none;
+  &:focus {
+    outline: none;
+  }
   ${mobile({
     width: "50px",
   })}

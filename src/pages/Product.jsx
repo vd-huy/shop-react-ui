@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import { Add, Remove } from "@mui/icons-material";
 import { useState } from "react";
 import { mobile } from "../responsive";
+import { popularProducts } from "../data";
 
 const Container = styled.div``;
 
@@ -136,6 +137,11 @@ const Product = () => {
       amount === 0 ? setAmount(0) : setAmount((pre) => pre - 1);
     }
   };
+
+  // const [id, setId] = useState(0);
+  // setId(sessionStorage.getItem("id"));
+  // console.log(sessionStorage.getItem("id"));
+
   return (
     <Container>
       <Announcement />
